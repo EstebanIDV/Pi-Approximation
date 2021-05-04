@@ -17,12 +17,17 @@ public class Montecarlo {
             if (checkinside <=1)
                 pointsinside++;
             pointstotal ++;
-            pi = 4*(pointsinside/recursos);
+
         }
+       pi = 4*(pointsinside/recursos);
        System.out.println(pi);
    }
 
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
         piaproximation(1000);
+        long endTime = System.nanoTime();
+        System.out.println("Runtime: " + (endTime - startTime) / 1e6);
+
     }
 }
